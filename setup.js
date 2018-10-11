@@ -38,7 +38,7 @@ fs.writeFileSync(fromRoot('package.json'), JSON.stringify(pkg, null, '  ') + '\n
 /**
  * Rewrite files replacing starter name
  */
-const rewriteFiles = [fs.fromRoot('public/index.html')]
+const rewriteFiles = [fromRoot('public/index.html')]
 rewriteFiles.forEach(rewrite => {
   const data = fs.readFileSync(fromRoot('public/index.html'))
   fs.writeFileSync(fromRoot('public/index.html', data.replace(/starter-react/g, name)))
