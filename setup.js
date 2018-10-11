@@ -39,15 +39,15 @@ fs.writeFileSync(fromRoot('package.json'), JSON.stringify(pkg, null, '  ') + '\n
  * Rewrite files replacing starter name
  */
 const rewriteFiles = [fromRoot('public/index.html'), fromRoot('public/manifest.json')]
-rewriteFiles.forEach(rewrite => {
-  const data = fs.readFileSync(fromRoot('public/index.html'), 'utf-8')
-  fs.writeFileSync(fromRoot('public/index.html'), data.replace(/starter-react/g, name), 'utf-8')
+rewriteFiles.forEach(file => {
+  const content = fs.readFileSync(fromRoot(file), 'utf-8')
+  fs.writeFileSync(fromRoot(file), content.replace(/starter-react/g, name), 'utf-8')
 })
 
 /**
  * Remove Files and Self destruct
  */
-const files = ['yarn.lock', 'setup.js', '.gitignore', '.prettierrc']
+const files = ['yarn.lock', '.travis.yml', '.gitignore', '.prettierrc', 'setup.js']
 files.forEach(file => fs.unlinkSync(fromRoot(file)))
 
 /**
