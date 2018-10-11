@@ -53,7 +53,12 @@ files.forEach(file => fs.unlinkSync(fromRoot(file)))
 /**
  * Add latest devDependencies and initialize git repo
  */
-const commands = [`yarn add ${deps}`, `yarn add --dev ${devDeps}`, 'git add .', 'git commit -am "first commit"']
+const commands = [
+  `yarn add ${deps}`,
+  `yarn add --dev ${devDeps}`,
+  'git add .',
+  'git commit -am "first commit from starter-react"'
+]
 commands.forEach(command => {
   console.log(`----- Executing Command -----> ${command}`)
   sync(command, { stdio: [0, 1, 2] })
