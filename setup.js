@@ -36,6 +36,15 @@ delete pkg.devDependencies
 fs.writeFileSync(fromRoot('package.json'), JSON.stringify(pkg, null, '  ') + '\n', 'utf-8')
 
 /**
+ * Rewrite files replacing starter name
+ */
+const rewriteFiles = [fs.fromRoot('public/index.html')]
+rewriteFiles.forEach(rewrite => {
+  const data = fs.readFileSync(fromRoot('public/index.html'))
+  fs.writeFileSync(fromRoot('public/index.html', data.replace(/starter-react/g, name)))
+})
+
+/**
  * Remove Files and Self destruct
  */
 const files = ['yarn.lock', 'setup.js', '.gitignore', '.prettierrc']
