@@ -40,8 +40,8 @@ fs.writeFileSync(fromRoot('package.json'), JSON.stringify(pkg, null, '  ') + '\n
  */
 const rewriteFiles = [fromRoot('public/index.html')]
 rewriteFiles.forEach(rewrite => {
-  const data = fs.readFileSync(fromRoot('public/index.html'))
-  fs.writeFileSync(fromRoot('public/index.html', data.replace(/starter-react/g, name)))
+  const data = fs.readFileSync(fromRoot('public/index.html'), 'utf-8')
+  fs.writeFileSync(fromRoot('public/index.html'), data.replace(/starter-react/g, name), 'utf-8')
 })
 
 /**
