@@ -24,17 +24,9 @@ fs.writeFileSync(
 )
 
 /**
- * ReWrite a package.json file
- * Change package name and remove devDependencies while re-writing
- */
-const pkg = require('./package.json')
-pkg.name = name
-fs.writeFileSync(fromRoot('package.json'), JSON.stringify(pkg, null, '  ') + '\n', 'utf-8')
-
-/**
  * Rewrite files replacing starter name
  */
-const rewriteFiles = ['public/index.html', 'public/manifest.json']
+const rewriteFiles = ['public/index.html', 'public/manifest.json', 'package.json']
 rewriteFiles.forEach(file => {
   const content = fs.readFileSync(fromRoot(file), 'utf-8')
   fs.writeFileSync(fromRoot(file), content.replace(/starter-react/g, name), 'utf-8')
