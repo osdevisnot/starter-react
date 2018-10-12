@@ -1,5 +1,7 @@
 # starter-react
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/osdevisnot/starter-react.svg)](https://greenkeeper.io/)
+
 This project is a starter for CRA based applications. To use this starter, ensure you have `degit` installed.
 
 ```
