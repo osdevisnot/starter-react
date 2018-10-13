@@ -35,7 +35,7 @@ rewriteFiles.forEach(file => {
 /**
  * Remove Files and Self destruct...
  */
-const files = ['yarn.lock', '.travis.yml', '.gitignore', '.prettierrc', 'setup.js']
+const files = ['.travis.yml', '.gitignore', '.prettierrc', 'setup.js']
 files.forEach(file => fs.unlinkSync(fromRoot(file)))
 
 /**
