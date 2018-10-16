@@ -39,16 +39,12 @@ const files = ['.travis.yml', 'setup.js']
 files.forEach(file => fs.unlinkSync(fromRoot(file)))
 
 /**
- * Conditionally initialize git
- */
-if (!fs.existsSync('.git')) {
-  sync('git init', { stdio: [0, 1, 2] })
-}
-
-/**
  * Add latest devDependencies and initialize git repo
  */
 const commands = ['git add .', 'git commit -am "first commit from starter-react"', 'npm install']
+if (!fs.existsSync('.git')) {
+  commands.unshift('git init')
+}
 commands.forEach(command => {
   console.log(`----- Executing Command -----> ${command}`)
   sync(command, { stdio: [0, 1, 2] })
