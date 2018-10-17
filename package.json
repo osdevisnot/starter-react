@@ -37,7 +37,7 @@
     "jest": "23.6.0",
     "jest-enzyme": "7.0.0",
     "node-sass": "4.9.4",
-    "react-i18next": "8.0.7",
+    "react-i18next": "8.0.8",
     "react-scripts": "2.0.5",
     "react-test-renderer": "16.5.2"
   },
