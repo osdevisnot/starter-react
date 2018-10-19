@@ -32,7 +32,7 @@
   "devDependencies": {
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.6.0",
-    "i18next": "11.9.1",
+    "i18next": "11.10.0",
     "i18next-browser-languagedetector": "2.2.3",
     "jest": "23.6.0",
     "jest-enzyme": "7.0.0",
