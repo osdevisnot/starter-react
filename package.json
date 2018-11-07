@@ -39,7 +39,7 @@
     "node-sass": "4.9.4",
     "react-i18next": "8.1.0",
     "react-scripts": "2.0.5",
-    "react-test-renderer": "16.6.0"
+    "react-test-renderer": "16.6.1"
   },
   "browserslist": [
     ">0.2%",
