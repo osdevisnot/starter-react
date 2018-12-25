@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "lodash": "4.17.11",
-    "obj-str": "1.0.1",
+    "obj-str": "1.0.2",
     "prop-types": "15.6.2",
     "react": "16.6.1",
     "react-app-polyfill": "0.1.3",
